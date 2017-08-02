@@ -1,0 +1,23 @@
+{
+  "name": "koa-passport-oauth2-testing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "koa": "^2.3.0",
+    "koa-passport": "^3.0.0",
+    "koa-route": "^3.2.0",
+    "koa-session": "^5.4.0",
+    "passport-github2": "^0.1.10"
+  },
+  "devDependencies": {
+    "supertest": "^3.0.0",
+    "tape": "^4.8.0"
+  }
+}
