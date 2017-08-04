@@ -41,7 +41,7 @@ passport.deserializeUser(async function(id, done) {
   }
 });
 
-function cb(accessToken, refreshToken, profile, done) {
+function strategyCallback(accessToken, refreshToken, profile, done) {
   // Possibly User.findOrCreate({...}) or similar
   let u = {
     id: 1,
@@ -65,11 +65,11 @@ function strategyForEnvironment() {
         clientID: process.env.CLIENT_ID,
         clientSecret: process.env.CLIENT_SECRET,
         callbackURL: process.env.CALLBACK_URL
-      }, cb);
+      }, strategyCallback);
       */
     //break;
     default:
-      strategy = new MockStrategy('github', cb);
+      strategy = new MockStrategy('github', strategyCallback);
   }
   return strategy;
 }

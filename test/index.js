@@ -25,7 +25,7 @@ const createAuthenticatedUser = (done) => {
 }
 
 test('it should work', t => {
-    createAuthenticatedUser(async (request) => {
+    createAuthenticatedUser(request => {
       request
       .get('/app')
       .expect(200)

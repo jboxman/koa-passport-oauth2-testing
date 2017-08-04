@@ -69,8 +69,4 @@ app.use(route.get('/app', function(ctx) {
   ctx.body = ctx.state.user;
 }));
 
-// start server
-//const port = process.env.PORT || 3000;
-//app.listen(port, () => console.log('Server listening on', port));
-
 module.exports = app;
